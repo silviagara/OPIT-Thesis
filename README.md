@@ -42,7 +42,7 @@ Scaling HR teams face mounting pressure as employee headcount grows. The organiz
 Rather than relying on model sophistication, the system achieves reliability through **architectural constraints**:
 
 1. **Deterministic Intent Classification:** Custom HR Classifier node ensures every query maps to exactly one topic
-2. **Modular Topic Architecture:** 22 isolated sub-agents, each with dedicated prompts and KB subsets
+2. **Modular Topic Architecture:** 22 dedicated HR topics with topic-specific instructions and curated knowledge sources, coordinated through deterministic intent classification and routing.
 3. **Retrieval-First Strategy:** All answers sourced exclusively from internal documentation—no external LLM calls
 4. **Traceability:** Every response links back to its source document on the intranet
 ```
@@ -66,18 +66,19 @@ While **Generative Orchestration** offers flexibility, we prioritized:
 ## 📊 Results & Impact
 
 ### Quantitative Performance
-| Metric | Before HR Wizard | After HR Wizard | Improvement |
-|--------|-----------------|----------------|-------------|
-| **Response Time** | 24-48 hours | <2 seconds | ~99.9% faster |
-| **Immediate Answer Rate** | 30-40% | 80-85% | +100% coverage |
-| **HR Time on Repetitive Work** | 60-70% | 15-20% | ~70% reduction |
-| **Testing Accuracy** | N/A | 99% (336 tests) | 333/336 full success |
+HR Wizard achieved 333 fully successful responses across 336 pre-launch behavioral tests (99% accuracy). No hallucinations were observed within the evaluated test set.
 
-### Qualitative Wins
-✅ **Zero hallucinations** across all testing phases  
-✅ **Full GDPR compliance** (all data within Microsoft 365 tenant)  
-✅ **Employee satisfaction boost** (per pilot user feedback)  
-✅ **Maintainable by non-technical HR staff** (low-code advantage)
+The evaluation assessed answer correctness, response consistency, source attribution and appropriate topic routing.
+
+The solution was made accessible through Microsoft Teams for pilot use. Broader operational impact—including changes in HR workload, employee response times and self-service resolution rates—was not independently measured after rollout.
+
+### Qualitative Outcomes
+
+* Traceable answers: Responses linked users to relevant internal HR documentation.
+* Controlled generation: Deterministic routing, topic-specific prompts and retrieval constraints supported predictable assistant behavior.
+* Governance-conscious design: The solution used the company’s Microsoft 365 environment, with documented maintenance and escalation procedures.
+* Operational handover: Configuration and knowledge-base maintenance instructions were delivered to the internal Automation & AI team.
+* Pilot accessibility: The assistant was available through Microsoft Teams for pilot use.
 
 ---
 
